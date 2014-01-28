@@ -1,0 +1,143 @@
+// Include reset and variables
+
+@import "_reset"
+@import "_variables"
+
+// Base styles
+
+html
+  padding: 4px 0
+  background: repeating-linear-gradient(90deg, $accent 0, $accent $top-stripe-width, $gray-dark $top-stripe-width, $gray-dark ($top-stripe-width * 2), $accent-dark ($top-stripe-width * 2), $accent-dark ($top-stripe-width * 3), $gray-light ($top-stripe-width * 3), $gray-light ($top-stripe-width * 4))
+
+body
+  font-family: "Gentium Basic"
+  font-weight: 400
+  background-color: $accent-darker
+  color: $white
+  font-size: $base-unit
+  line-height: $base-line-height
+
+h1, h2, h3, h4, h5, h6
+  font-family: "Exo 2"
+  font-weight: 600
+
+a
+  text-decoration: none
+
+// Header
+
+header
+  width: 100%
+  max-width: $content-width
+  margin: 0 auto
+  &::after
+    content: ""
+    display: block
+    clear: both
+  div
+    padding: ($base-unit * 2) 0
+    width: 50%
+    float: left
+    h1, span
+      font-size: 1.2em
+      display: block
+      -webkit-transform-origin: 50% 50%
+      transform-origin: 50% 50%
+      -webkit-transform: rotate(-5deg)
+      transform: rotate(-5deg)
+    span
+      color: lighten($accent-darker, ($color-difference * 5))
+
+// Nav
+
+nav
+  width: 50%
+  float: right
+  padding: ($base-unit * 2) 0
+  li
+    display: inline-block
+    padding: ($base-unit / 2) $base-unit
+    border-radius: $bdrz-small
+    cursor: default
+    float: right
+    margin-left: $base-unit
+    a
+      padding: ($base-unit / 2) $base-unit
+      border-radius: $bdrz-small
+      transition: background-color 0.2s, color 0.2s
+      &, &:link, &:visited
+        color: $accent-darker
+        background-color: $accent
+      &:hover
+        color: lighten($accent-darker, $color-difference)
+        background-color: lighten($accent, $color-difference)
+      &:active
+        color: darken($accent-darker, $color-difference)
+        background-color: darken($accent, $color-difference)
+
+// Article content
+
+article
+  width: 100%
+  max-width: $content-width
+  margin: 5rem auto
+  h2
+    font-size: 5em
+    margin-bottom: 2rem
+    & + span
+      font-size: 2em
+      font-style: italic
+      color: lighten($accent-darker, ($color-difference * 10))
+      display: block
+      margin-bottom: 2rem
+  hr
+    height: 0
+    border: none
+    border-top: 1px solid darken($accent-darker, $color-difference)
+    border-bottom: 1px solid lighten($accent-darker, $color-difference)
+  h3
+    font-size: 3em
+    margin: 2rem 0 1rem
+  h4
+    font-size: 1.5em
+    margin: 2rem 0 1rem
+    text-transform: uppercase
+  p, ul
+    margin-bottom: 1rem
+    a
+      -webkit-transition: color 0.3s
+      transition: color 0.3s
+      &, &:link, &:visited
+        color: $accent
+      &:hover, &:active
+        color: lighten($accent, $color-difference)
+  ul, ol
+    padding-left: 1em
+  ul
+    list-style-type: circle
+  ol
+    list-style-type: decimal
+
+// Section content (for about page)
+
+section
+  width: 100%
+  max-width: $content-width
+  margin: 5rem auto
+  p
+    font-size: 3em
+    a
+      -webkit-transition: color 0.3s
+      transition: color 0.3s
+      &, &:link, &:visited
+        color: $accent
+      &:hover, &:active
+        color: lighten($accent, $color-difference)
+
+// Footer
+
+footer
+  text-align: center
+  font-size: 0.75em
+  padding-bottom: 5rem
+  color: lighten($accent-darker, ($color-difference * 2))

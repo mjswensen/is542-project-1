@@ -1,0 +1,15 @@
+{
+  "name": "is542-project-1",
+  "description": "First project for IS 542 - Web Development course.",
+  "author": "Matt Swensen",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mjswensen/is542-project-1.git"
+  },
+  "devDependencies": {
+    "grunt-contrib-sass": "~0.7.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2"
+  }
+}

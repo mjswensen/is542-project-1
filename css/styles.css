@@ -1,0 +1,172 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  padding: 4px 0;
+  background: repeating-linear-gradient(90deg, #e74067 0, #e74067 90px, #675664 90px, #675664 180px, #542733 180px, #542733 270px, #d4c4d3 270px, #d4c4d3 360px); }
+
+body {
+  font-family: "Gentium Basic";
+  font-weight: 400;
+  background-color: #2f2729;
+  color: #fff5f5;
+  font-size: 18px;
+  line-height: 1; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Exo 2";
+  font-weight: 600; }
+
+a {
+  text-decoration: none; }
+
+header {
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto; }
+  header::after {
+    content: "";
+    display: block;
+    clear: both; }
+  header div {
+    padding: 36px 0;
+    width: 50%;
+    float: left; }
+    header div h1, header div span {
+      font-size: 1.2em;
+      display: block;
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
+      -webkit-transform: rotate(-5deg);
+      transform: rotate(-5deg); }
+    header div span {
+      color: #907a7f; }
+
+nav {
+  width: 50%;
+  float: right;
+  padding: 36px 0; }
+  nav li {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 2px;
+    cursor: default;
+    float: right;
+    margin-left: 18px; }
+    nav li a {
+      padding: 9px 18px;
+      border-radius: 2px;
+      transition: background-color 0.2s, color 0.2s; }
+      nav li a, nav li a:link, nav li a:visited {
+        color: #2f2729;
+        background-color: #e74067; }
+      nav li a:hover {
+        color: #43383a;
+        background-color: #eb6081; }
+      nav li a:active {
+        color: #1c1718;
+        background-color: #e4214e; }
+
+article {
+  width: 100%;
+  max-width: 540px;
+  margin: 5rem auto; }
+  article h2 {
+    font-size: 5em;
+    margin-bottom: 2rem; }
+    article h2 + span {
+      font-size: 2em;
+      font-style: italic;
+      color: #e1dbdc;
+      display: block;
+      margin-bottom: 2rem; }
+  article hr {
+    height: 0;
+    border: none;
+    border-top: 1px solid #1c1718;
+    border-bottom: 1px solid #43383a; }
+  article h3 {
+    font-size: 3em;
+    margin: 2rem 0 1rem; }
+  article h4 {
+    font-size: 1.5em;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase; }
+  article p, article ul {
+    margin-bottom: 1rem; }
+    article p a, article ul a {
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+      article p a, article p a:link, article p a:visited, article ul a, article ul a:link, article ul a:visited {
+        color: #e74067; }
+      article p a:hover, article p a:active, article ul a:hover, article ul a:active {
+        color: #eb6081; }
+  article ul, article ol {
+    padding-left: 1em; }
+  article ul {
+    list-style-type: circle; }
+  article ol {
+    list-style-type: decimal; }
+
+section {
+  width: 100%;
+  max-width: 540px;
+  margin: 5rem auto; }
+  section p {
+    font-size: 3em; }
+    section p a {
+      -webkit-transition: color 0.3s;
+      transition: color 0.3s; }
+      section p a, section p a:link, section p a:visited {
+        color: #e74067; }
+      section p a:hover, section p a:active {
+        color: #eb6081; }
+
+footer {
+  text-align: center;
+  font-size: 0.75em;
+  padding-bottom: 5rem;
+  color: #56484b; }
