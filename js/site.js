@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			scala = 'Scala';
 
 		// Set text for header elements and title element
-		h1.innerText = 'IS 542 Projet 1';
+		h1.innerText = 'IS 542 Project 1';
 		span.innerText = 'By Matt Swensen';
 
 		if(/contact/.test(window.location.pathname)) {
@@ -61,15 +61,37 @@ document.addEventListener("DOMContentLoaded", function() {
 	})();
 
 	// Requirement two: prompt user to maintain session every 10 seconds
-	(function() {
-		function sessionReminder() {
-			if(confirm('Would you like to extend your session?')) {
-				setTimeout(sessionReminder, 10000);
-			} else {
-				window.location.href = 'http://www.google.com';
-			}
-		}
-		setTimeout(sessionReminder, 10000);
-	})();
+	// (function() {
+	// 	function sessionReminder() {
+	// 		if(confirm('Would you like to extend your session?')) {
+	// 			setTimeout(sessionReminder, 10000);
+	// 		} else {
+	// 			window.location.href = 'http://www.google.com';
+	// 		}
+	// 	}
+	// 	setTimeout(sessionReminder, 10000);
+	// })();
 
 }, false);
+
+/*
+ * jQuery assignment requirements
+ */
+
+$(function() {
+	var rating = $(".rating"); // via class
+	$('#rating-slider').slider({ // via ID, jQuery UI
+		range: 'min',
+		value: 5,
+		min: 0,
+		max: 10,
+		slide: function(e, ui) {
+			rating.text(ui.value); // manipulation
+		}
+	});
+	$(document).on('mouseenter', 'header div', function() { // element, event
+		$(this).addClass('wiggle');
+	}).on('mouseleave', 'header div', function() {
+		$(this).removeClass('wiggle');
+	});
+});

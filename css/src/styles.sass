@@ -1,7 +1,8 @@
-// Include reset and variables
+// Include reset, variables, and animations
 
 @import "_reset"
 @import "_variables"
+@import "_animations"
 
 // Base styles
 
@@ -38,6 +39,9 @@ header
     padding: ($base-unit * 2) 0
     width: 50%
     float: left
+    &.wiggle
+      -webkit-animation: wiggle 0.5s cubic-bezier(.21,.45,.66,.44) infinite
+      animation: wiggle 0.5s cubic-bezier(.21,.45,.66,.44) infinite
     h1, span
       font-size: 1.2em
       display: block
@@ -117,6 +121,15 @@ article
     list-style-type: circle
   ol
     list-style-type: decimal
+  .rating-container
+    margin-top: 2rem
+    color: lighten($accent-darker, ($color-difference * 5))
+    p
+      text-align: center
+      em
+        font-style: italic
+      strong
+        font-weight: 700
 
 // Section content (for about page)
 

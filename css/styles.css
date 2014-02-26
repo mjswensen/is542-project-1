@@ -44,6 +44,26 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+@-webkit-keyframes wiggle {
+  0% {
+    -webkit-transform: rotate(-5deg); }
+
+  50% {
+    -webkit-transform: rotate(5deg); }
+
+  100% {
+    -webkit-transform: rotate(-5deg); } }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg); }
+
+  50% {
+    transform: rotate(5deg); }
+
+  100% {
+    transform: rotate(-5deg); } }
+
 html {
   padding: 4px 0;
   background: repeating-linear-gradient(90deg, #e74067 0, #e74067 90px, #675664 90px, #675664 180px, #542733 180px, #542733 270px, #d4c4d3 270px, #d4c4d3 360px); }
@@ -75,6 +95,9 @@ header {
     padding: 36px 0;
     width: 50%;
     float: left; }
+    header div.wiggle {
+      -webkit-animation: wiggle 0.5s cubic-bezier(0.21, 0.45, 0.66, 0.44) infinite;
+      animation: wiggle 0.5s cubic-bezier(0.21, 0.45, 0.66, 0.44) infinite; }
     header div h1, header div span {
       font-size: 1.2em;
       display: block;
@@ -150,6 +173,15 @@ article {
     list-style-type: circle; }
   article ol {
     list-style-type: decimal; }
+  article .rating-container {
+    margin-top: 2rem;
+    color: #907a7f; }
+    article .rating-container p {
+      text-align: center; }
+      article .rating-container p em {
+        font-style: italic; }
+      article .rating-container p strong {
+        font-weight: 700; }
 
 section {
   width: 100%;
